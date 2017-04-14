@@ -1,0 +1,53 @@
+#N canvas 1 85 640 515 10;
+#X obj 2 3 cnv 15 400 100 empty empty empty 20 12 0 14 -249661 -66577
+0;
+#X text 6 41 author: mrtoftrash@gmail.com;
+#X msg 145 207 3;
+#X msg 106 207 6;
+#X text 7 2 description: increment a number.;
+#X text 8 26 tags: flow counter;
+#X obj 57 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 57 305 print;
+#X text 54 108 First inlet:;
+#X obj 57 453 print;
+#X obj 57 343 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 80 371 set 43;
+#X text 192 413 Argument 1: start value (defaults to 0);
+#X obj 196 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 57 277 tof/increment;
+#X obj 57 422 tof/increment 10 3;
+#X text 6 56 version: 2009-10-23 (two inlet version);
+#X text 126 371 Set the value;
+#X text 165 171 Second inlet:;
+#X text 180 201 bang: resets to 0;
+#X text 179 188 float: sets value;
+#X text 99 122 bang: outputs and increments the value;
+#X text 100 135 float: sets increment amount and outputs incremented
+value;
+#X text 192 428 Argument 2: incrementation amount (defaults to 1);
+#X msg 81 165 2;
+#X msg 97 393 1;
+#N canvas 213 220 494 344 META 0;
+#X text 12 145 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42.;
+#X text 12 125 AUTHOR Thomas Ouellet Fredericks;
+#X text 12 5 KEYWORDS control;
+#X text 12 65 INLET_0 bang float;
+#X text 12 85 INLET_1 bang float;
+#X text 12 105 OUTLET_0 float;
+#X text 12 45 LICENSE S.I. BSD;
+#X text 12 25 DESCRIPTION increment a number;
+#X restore 560 462 pd META;
+#X connect 2 0 14 1;
+#X connect 3 0 14 1;
+#X connect 6 0 14 0;
+#X connect 10 0 15 0;
+#X connect 11 0 15 0;
+#X connect 13 0 14 1;
+#X connect 14 0 7 0;
+#X connect 15 0 9 0;
+#X connect 24 0 14 0;
+#X connect 25 0 15 0;

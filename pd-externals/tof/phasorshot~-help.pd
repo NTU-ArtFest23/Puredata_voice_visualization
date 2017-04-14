@@ -1,0 +1,92 @@
+#N canvas 1 83 676 617 10;
+#X obj 63 566 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-1 -262144 -1 0 256;
+#X obj 246 460 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 177 287 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 58 144 0.1;
+#X msg 89 144 -0.1;
+#X msg 128 144 -0.5;
+#X msg 134 240 0.9;
+#X msg 166 240 0;
+#X msg 25 144 1;
+#X obj 151 376 print UPPER;
+#X obj 149 398 print LOWER;
+#X obj 228 507 *~;
+#X obj 227 536 tabread4~ \$0table;
+#X msg 169 144 0.5;
+#X msg 201 239 0.5;
+#X text 213 144 Inlet 1: frequency;
+#X text 212 287 Inlet 3: loop off/on;
+#X msg 183 171 0;
+#X obj 61 328 tof/phasorshot~;
+#X text 315 175 phasorshot~ is like a phasor with more options:;
+#X text 275 195 + The looping of the generated signal can be disabled.
+;
+#X text 276 214 + A bang is outputed when the upper or lower bounds
+of the generated signal are reached., f 53;
+#X text 159 217 Inlet 2: phase;
+#X text 173 326 Argument: float: loop off/on (0/1);
+#N canvas 347 162 396 311 load 0;
+#X obj 116 170 soundfiler;
+#X msg 116 132 read -resize \$1 \$2;
+#X obj 116 101 list append \$0table;
+#X obj 116 68 openpanel;
+#X obj 116 23 inlet;
+#X obj 116 210 outlet;
+#X obj 252 213 table \$0table;
+#X msg 207 69 tof/voice.wav;
+#X obj 207 32 loadbang;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 7 0 2 0;
+#X connect 8 0 7 0;
+#X restore 246 481 pd load sound file;
+#X text 232 377 Outlets 2 and 3 bang when the upper or lower bound
+is reached.;
+#N canvas 439 212 494 344 META 0;
+#X text 12 205 HELP_PATCH_AUTHORS "pd meta" information added by Jonathan
+Wilkes for Pd version 0.42.;
+#X text 12 185 AUTHOR Thomas Ouellet Fredericks;
+#X text 12 125 OUTLET_0 symbol;
+#X text 12 25 DESCRIPTION a feature rich phasor~;
+#X text 12 5 KEYWORDS signal;
+#X text 12 65 INLET_0 signal;
+#X text 12 85 INLET_1 float;
+#X text 12 105 INLET_2 float;
+#X text 12 145 OUTLET_1 bang;
+#X text 12 165 OUTLET_2 bang;
+#X text 12 45 LICENSE S.I. BSD;
+#X restore 599 570 pd META;
+#X obj 2 2 cnv 15 400 100 empty empty empty 20 12 0 14 -249661 -66577
+0;
+#X text 10 48 author: mrtoftrash@gmail.com;
+#X text 10 7 description: A feature rich phasor~.;
+#X text 9 26 tags: signal generator;
+#X text 8 69 version: 2008-04-03 (initial release \, 0.2);
+#X obj 62 543 cyclone/Snapshot~ 100;
+#X obj 226 572 tof/output~;
+#X connect 1 0 24 0;
+#X connect 2 0 18 2;
+#X connect 3 0 18 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 18 1;
+#X connect 7 0 18 1;
+#X connect 8 0 18 0;
+#X connect 11 0 12 0;
+#X connect 12 0 33 0;
+#X connect 12 0 33 1;
+#X connect 13 0 18 0;
+#X connect 14 0 18 1;
+#X connect 17 0 18 0;
+#X connect 18 0 11 0;
+#X connect 18 0 32 0;
+#X connect 18 1 10 0;
+#X connect 18 2 9 0;
+#X connect 24 0 11 1;
+#X connect 32 0 0 0;
