@@ -1,0 +1,3 @@
+#N canvas 259 162 450 300 12;
+#X obj 28 63 gwin;
+#X obj 153 179 clone 100 random_square;
