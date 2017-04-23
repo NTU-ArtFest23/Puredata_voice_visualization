@@ -1,0 +1,38 @@
+#N canvas 65 105 450 300 12;
+#X obj 62 191 gwin;
+#X msg 275 142 all 0;
+#X msg 306 113 all 1;
+#X obj 221 -1 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 225 85 random 64;
+#X floatatom 225 109 5 0 0 0 - - -, f 5;
+#X msg 191 148 \$1 bang;
+#X obj 230 37 metro 20;
+#X floatatom 98 20 5 0 0 0 - - -, f 5;
+#X floatatom 163 21 5 0 0 0 - - -, f 5;
+#X obj 92 62 pack 1 1 1;
+#X obj 132 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 52 17 5 0 0 0 - - -, f 5;
+#X msg 37 145 view 0 -2 \$1 \$2 \$3;
+#X obj 66 36 / 50;
+#X msg 258 1 0;
+#X obj 252 211 clone 64 cube_pos;
+#X obj 212 250 clone 64 cube_pos1_2;
+#X connect 1 0 16 0;
+#X connect 2 0 16 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 16 0;
+#X connect 7 0 4 0;
+#X connect 8 0 10 1;
+#X connect 8 0 11 0;
+#X connect 9 0 10 2;
+#X connect 9 0 11 0;
+#X connect 10 0 13 0;
+#X connect 11 0 10 0;
+#X connect 12 0 14 0;
+#X connect 13 0 0 0;
+#X connect 14 0 10 0;
+#X connect 15 0 7 0;
