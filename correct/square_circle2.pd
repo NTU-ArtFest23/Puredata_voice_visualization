@@ -1,0 +1,14 @@
+#N canvas 65 105 554 447 12;
+#X obj 31 32 gwin;
+#X obj 150 82 square_circle;
+#X obj 151 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 148 189 square_circle;
+#X obj 262 42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 119 137 delay 550;
+#X connect 2 0 1 0;
+#X connect 2 0 5 0;
+#X connect 4 0 1 1;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
