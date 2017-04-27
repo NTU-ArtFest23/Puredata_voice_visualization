@@ -19,7 +19,7 @@
 #X msg 119 59 0;
 #X obj 142 160 * 3;
 #X obj 101 232 clone 90 random_square;
-#X msg 69 196 all 2.5;
+#X msg 69 196 all 2;
 #X connect 1 0 2 0;
 #X connect 1 0 4 0;
 #X connect 1 0 6 0;

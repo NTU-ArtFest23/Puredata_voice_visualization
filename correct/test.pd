@@ -1,0 +1,5 @@
+#N canvas 0 50 450 300 12;
+#X obj 124 93 gwin;
+#X msg 289 109 1 2 3 4 0.5;
+#X obj 280 195 move_mode_text;
+#X connect 1 0 2 0;

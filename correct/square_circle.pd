@@ -1,4 +1,4 @@
-#N canvas 65 382 588 443 12;
+#N canvas 549 50 588 479 12;
 #X obj 45 316 clone 20 move_mode;
 #X obj 194 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
