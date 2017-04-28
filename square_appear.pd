@@ -1,4 +1,4 @@
-#N canvas 614 93 497 300 12;
+#N canvas 830 131 497 300 12;
 #X obj 28 63 gwin;
 #X obj 201 -39 gemhead;
 #X msg 112 32 draw line;
@@ -18,8 +18,10 @@
 #X msg 178 61 0;
 #X msg 119 59 0;
 #X obj 142 160 * 3;
+#X msg 69 196 all 0;
 #X obj 101 232 clone 90 random_square;
-#X msg 69 196 all 2;
+#X msg 80 153 all 3;
+#X msg 59 175 all 1;
 #X connect 1 0 2 0;
 #X connect 1 0 4 0;
 #X connect 1 0 6 0;
@@ -27,8 +29,8 @@
 #X connect 3 0 5 0;
 #X connect 4 0 3 0;
 #X connect 6 0 5 1;
-#X connect 7 0 18 1;
-#X connect 8 0 18 2;
+#X connect 7 0 19 1;
+#X connect 8 0 19 2;
 #X connect 9 0 7 0;
 #X connect 10 0 8 0;
 #X connect 11 0 14 0;
@@ -40,4 +42,6 @@
 #X connect 16 0 12 0;
 #X connect 17 0 9 0;
 #X connect 17 0 10 0;
-#X connect 19 0 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 19 0;
+#X connect 21 0 19 0;
