@@ -10,7 +10,6 @@
 #X msg 174 99 5 1 -2 0;
 #X obj 103 11 loadbang;
 #X obj 158 268 clone 8 series_num;
-#X obj 307 79 inlet;
 #X connect 0 0 10 0;
 #X connect 1 0 10 0;
 #X connect 2 0 10 4;
