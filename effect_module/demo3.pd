@@ -1,0 +1,37 @@
+#N canvas 835 184 647 300 12;
+#X obj 59 241 _snow_flower1;
+#X obj 28 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 58 164 5 0 1000 0 - - -, f 5;
+#X obj 59 187 / 50;
+#X obj 58 209 + 0.01;
+#X obj 175 174 _snow_flower2_amp;
+#X obj 152 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 55 140 clip 0 20;
+#X obj 50 83 - 50;
+#X obj 162 111 loadbang;
+#X obj 163 143 delay 1000;
+#X obj 50 113 / 2;
+#X obj 348 224 like_text_ripple;
+#X obj 513 105 gwin;
+#X obj 389 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 341 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 457 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 1;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 10 0 1 0;
+#X connect 11 0 7 0;
+#X connect 14 0 12 1;
+#X connect 15 0 12 0;
+#X connect 16 0 12 2;

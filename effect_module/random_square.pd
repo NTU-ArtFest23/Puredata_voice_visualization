@@ -1,5 +1,5 @@
-#N canvas 735 69 799 575 12;
-#X obj 11 122 gemhead;
+#N canvas 194 100 799 575 12;
+#X obj 27 145 gemhead;
 #X floatatom 242 522 5 0.2 2 0 - - -, f 5;
 #X msg 70 432 draw line;
 #X obj 168 492 translateXYZ;
@@ -65,6 +65,7 @@
 #X obj 27 344 random 2;
 #X obj 33 379 sel 1;
 #X obj 446 413 expr ($f1*0.1/100)+0.1;
+#X obj 624 69 inlet;
 #X connect 0 0 16 0;
 #X connect 1 0 41 1;
 #X connect 2 0 41 0;
@@ -143,3 +144,4 @@
 #X connect 63 0 60 0;
 #X connect 63 1 2 0;
 #X connect 64 0 12 0;
+#X connect 65 0 0 0;

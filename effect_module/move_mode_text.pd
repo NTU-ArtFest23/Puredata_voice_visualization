@@ -73,6 +73,10 @@
 #X obj 14 570 random 10;
 #X msg 36 601 \$1;
 #X obj 327 580 metro 200;
+#X obj 441 25 inlet;
+#X obj 439 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 529 21 loadbang;
 #X connect 0 0 3 0;
 #X connect 1 0 5 0;
 #X connect 2 0 3 0;
@@ -170,3 +174,6 @@
 #X connect 67 0 68 0;
 #X connect 68 0 64 0;
 #X connect 69 0 67 0;
+#X connect 70 0 71 0;
+#X connect 71 0 4 0;
+#X connect 72 0 71 0;
