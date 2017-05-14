@@ -1,4 +1,4 @@
-#N canvas 360 292 767 650 12;
+#N canvas 626 64 767 650 12;
 #X obj 44 24 gwin;
 #X obj 44 422 _cube_pos;
 #X obj 55 153 env~;
@@ -22,7 +22,7 @@
 #X obj 550 584 like_text_ripple;
 #X obj 161 257 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 169 74 loadbang;
+#X obj 557 23 loadbang;
 #X obj 202 366 spigot 0;
 #X msg 342 506 all \$1;
 #X floatatom 340 247 5 0 0 0 - - -, f 5;
@@ -31,7 +31,7 @@
 #X floatatom 342 458 5 0 0 0 - - -, f 5;
 #X obj 341 222 env~;
 #X obj 284 335 spigot 0;
-#X obj 258 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 258 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 262 276 \$1;
 #X obj 342 481 expr pow(1.01 \, $f1)-0.99;
@@ -65,7 +65,7 @@
 #X obj 221 111 % 3;
 #X floatatom 173 117 5 0 0 0 - - -, f 5;
 #X obj 173 139 route 0 1 2;
-#X obj 210 261 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 210 261 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 166 165 0;
 #X msg 166 197 1;
@@ -73,10 +73,16 @@
 #X msg 203 197 1;
 #X msg 240 165 0;
 #X msg 240 197 1;
-#X obj 290 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 170 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 368 274 |;
 #X floatatom 368 299 5 0 0 0 - - -, f 5;
+#X msg 544 156 \; pd dsp \$1;
+#X msg 543 131 1;
+#X msg 590 129 0;
+#X obj 562 96 t b b;
+#X obj 387 65 metro 30000;
+#X obj 552 66 metro 5000;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 4 0 19 0;
@@ -101,6 +107,8 @@
 #X connect 21 0 12 1;
 #X connect 21 0 1 1;
 #X connect 22 0 59 0;
+#X connect 22 0 77 0;
+#X connect 22 0 78 0;
 #X connect 23 0 17 0;
 #X connect 24 0 14 1;
 #X connect 25 0 30 0;
@@ -177,3 +185,9 @@
 #X connect 71 0 72 0;
 #X connect 72 0 13 1;
 #X connect 72 0 51 1;
+#X connect 74 0 73 0;
+#X connect 75 0 73 0;
+#X connect 76 0 74 0;
+#X connect 76 1 75 0;
+#X connect 77 0 59 0;
+#X connect 78 0 76 0;
